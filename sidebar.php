@@ -13,7 +13,7 @@
 			<i class="ri-fire-line text-xl text-primary"></i>
 			<?php esc_html_e( '人気の記事', 'syublog-org-theme' ); ?>
 		</h2>
-		<ul class="posts-list">
+		<ul class="sidebar-posts-list">
 			<?php
 			$popular_posts = new WP_Query(
 				array(

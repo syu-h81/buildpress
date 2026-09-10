@@ -31,6 +31,13 @@ function syublog_org_theme_assets() {
 		array( 'bootstrap' ),
 		wp_get_theme()->get( 'Version' )
 	);
+	// サイドバー専用CSS
+	wp_enqueue_style(
+		'syublog-org-theme-sidebar',
+		get_template_directory_uri() . '/assets/css/sidebar.css',
+		array( 'syublog-org-theme-style' ),
+		wp_get_theme()->get( 'Version' )
+	);
 	wp_enqueue_script(
 		'bootstrap',
 		'https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js',
