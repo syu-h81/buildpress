@@ -9,6 +9,10 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Font Awesome CDN -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<!-- Remix Icon CDN -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -24,13 +28,13 @@
 			<form class="site-search d-flex" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 				<label class="visually-hidden" for="site-search-input"><?php esc_html_e( 'Search', 'syublog-org-theme' ); ?></label>
 				<div class="input-group">
-					<span class="input-group-text site-search__icon" aria-hidden="true">&#128269;</span>
+					<i class="ri-search-line text-white/60 text-lg"></i>
 					<input id="site-search-input" class="form-control site-search__input" type="search" name="s" value="<?php echo esc_attr( get_search_query() ); ?>" placeholder="<?php esc_attr_e( 'Search...', 'syublog-org-theme' ); ?>">
 				</div>
 			</form>
 		</div>
 	</header>
-	<nav class="category-nav bg-primary border-top border-white border-opacity-25" aria-label="<?php esc_attr_e( 'Categories', 'syublog-org-theme' ); ?>">
+	<nav class="header-category-nav border-top border-white border-opacity-25" aria-label="<?php esc_attr_e( 'Categories', 'syublog-org-theme' ); ?>">
 		<div class="category-nav__inner">
 			<ul class="category-nav__list list-unstyled d-flex flex-wrap justify-content-center gap-2 gap-md-4 mb-0">
 				<?php

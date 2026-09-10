@@ -96,6 +96,11 @@ img {
   box-shadow: none;
 }
 
+.header-category-nav {
+  background: rgba(16, 185, 129, 1);
+  padding: 0.2rem 1rem;
+}
+
 .category-nav {
   background-color: #1e3a8a !important;
   padding: 0.7rem 1rem;
@@ -137,10 +142,13 @@ img {
 }
 
 .site-main {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 280px;
+  display: flex;
   gap: 3rem;
-  padding: 3rem 1rem;
+  padding: 3rem 0;
+}
+
+.content-area {
+  width: 70%;
 }
 
 .entry-meta,
@@ -156,6 +164,152 @@ img {
 
 .widget + .widget {
   margin-top: 1rem;
+}
+
+/* Sidebar Widgets Styles */
+.custom-shadow {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.site-sidebar {
+  width: 30%;
+}
+
+.widget-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: 0.75rem;
+  color: var(--color-text);
+}
+
+.widget-icon {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+/* Popular Posts */
+.posts-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.post-item:last-child {
+  border-bottom: none;
+}
+
+.post-item a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  display: block;
+  transition: color 0.2s ease;
+}
+
+.post-item a:hover {
+  color: #135caa;
+  text-decoration: underline;
+}
+
+/* Categories */
+.categories-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.95rem;
+}
+
+.category-item:last-child {
+  border-bottom: none;
+}
+
+.category-item a {
+  flex: 1;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.category-item a:hover {
+  color: #135caa;
+  text-decoration: underline;
+}
+
+.category-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 24px;
+  background-color: #e8f0fe;
+  color: var(--color-link);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-left: 0.75rem;
+}
+
+/* Tags Cloud */
+.tags-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 0.75rem;
+  background-color: #e8f0fe;
+  color: var(--color-link);
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.tag-item:hover {
+  background-color: var(--color-link);
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tag-item.tag-large {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 0.9rem;
+}
+
+.tag-item.tag-medium {
+  font-size: 0.9rem;
+  font-weight: 550;
+}
+
+.tag-item.tag-small {
+  font-size: 0.8rem;
+  font-weight: 500;
 }
 
 @media (max-width: 720px) {
@@ -187,4 +341,62 @@ img {
   .site-sidebar {
     margin-top: 3rem;
   }
+}
+
+.posts-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(276px, 1fr));
+  gap: 1.5rem;
+}
+
+.article-card {
+  width: 100%;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.1),
+    0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.article-card__link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.article-card__image {
+  display: block;
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+}
+
+.article-card__badge {
+  padding: 5px 10px;
+  background-color: #0d47a1;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.article-card__date {
+  color: #6c757d;
+  font-size: 11px;
+}
+
+.article-card__title {
+  color: #111827;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.article-card__description {
+  color: #4b5563;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.article-card__link:hover .article-card__title {
+  opacity: 0.75;
 }
