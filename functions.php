@@ -31,10 +31,24 @@ function syublog_org_theme_assets() {
 		array( 'bootstrap' ),
 		wp_get_theme()->get( 'Version' )
 	);
+	// ヘッダー専用CSS
+	wp_enqueue_style(
+		'syublog-org-theme-header',
+		get_template_directory_uri() . '/assets/css/header.css',
+		array( 'syublog-org-theme-style' ),
+		wp_get_theme()->get( 'Version' )
+	);
 	// サイドバー専用CSS
 	wp_enqueue_style(
 		'syublog-org-theme-sidebar',
 		get_template_directory_uri() . '/assets/css/sidebar.css',
+		array( 'syublog-org-theme-style' ),
+		wp_get_theme()->get( 'Version' )
+	);
+	// ページネーション専用CSS
+	wp_enqueue_style(
+		'syublog-org-theme-pagination',
+		get_template_directory_uri() . '/assets/css/pagination.css',
 		array( 'syublog-org-theme-style' ),
 		wp_get_theme()->get( 'Version' )
 	);

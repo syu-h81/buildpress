@@ -51,54 +51,8 @@ img {
   flex-direction: column;
 }
 
-.site-header,
 .site-footer {
   padding: 1.5rem 1rem;
-}
-
-.site-header {
-  background-color: #1e3a8a !important;
-}
-
-.site-header__inner,
-.category-nav__inner {
-  width: min(100%, var(--content-width));
-  margin: 0 auto;
-}
-
-.site-search {
-  width: min(100%, 270px);
-}
-
-.site-search .input-group {
-  border-radius: 999px;
-  overflow: hidden;
-}
-
-.site-search__icon,
-.site-search__input {
-  border: 0;
-  background-color: rgba(255, 255, 255, 0.16);
-  color: #fff;
-}
-
-.site-search__icon {
-  padding-right: 0.25rem;
-}
-
-.site-search__input::placeholder {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.site-search__input:focus {
-  background-color: rgba(255, 255, 255, 0.24);
-  color: #fff;
-  box-shadow: none;
-}
-
-.header-category-nav {
-  background: rgba(16, 185, 129, 1);
-  padding: 0.2rem 1rem;
 }
 
 .category-nav {

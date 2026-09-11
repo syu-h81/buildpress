@@ -49,12 +49,28 @@ get_header();
 					</article>
 				<?php endwhile; ?>
 			</div>
-			<?php the_posts_pagination( array(
-				'mid_size' => 2,
-				'prev_text' => '&lsaquo;',
-				'next_text' => '&rsaquo;',
-				'type' => 'list',
-			) ); ?>
+			<?php
+				global $wp_query;
+				$big = 999999999;
+				$pagination = paginate_links(
+				array(
+					'base'      => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+					'format'    => '?paged=%#%',
+					'current'   => max( 1, get_query_var( 'paged' ) ),
+					'total'     => $wp_query->max_num_pages,
+					'mid_size'  => 1,
+					'end_size'  => 1,
+					'prev_text' => '<span aria-hidden="true">‹</span>',
+					'next_text' => '<span aria-hidden="true">›</span>',
+					'type'      => 'list',
+				)
+			);
+			if ( $pagination ) :
+				?>
+				<nav class="pagination-wrap" aria-label="投稿ページナビゲーション">
+					<?php echo wp_kses_post( $pagination ); ?>
+				</nav>
+			<?php endif; ?>
 		<?php else : ?>
 			<p><?php esc_html_e( 'Nothing found.', 'syublog-org-theme' ); ?></p>
 		<?php endif; ?>
