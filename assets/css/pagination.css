@@ -1,0 +1,58 @@
+.pagination-wrap {
+  margin-top: 40px;
+}
+
+.pagination-wrap .page-numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pagination-wrap .page-numbers li {
+  margin: 0;
+}
+
+.pagination-wrap .page-numbers a,
+.pagination-wrap .page-numbers span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  background-color: #fff;
+  color: #111827;
+
+  font-size: 16px;
+  text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.pagination-wrap .page-numbers a:hover {
+  background-color: #f3f4f6;
+}
+
+/* 現在のページ */
+.pagination-wrap .page-numbers .current {
+  background-color: #244393;
+  border-color: #244393;
+  color: #fff;
+}
+
+/* 前へ・次へ */
+.pagination-wrap .prev,
+.pagination-wrap .next {
+  font-size: 26px;
+}
