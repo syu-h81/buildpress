@@ -5,7 +5,7 @@
  * @package Syublog_Org_Theme
  */
 ?>
-<aside class="site-sidebar" aria-label="<?php esc_attr_e( 'Sidebar', 'syublog-org-theme' ); ?>">
+<aside class="sidebar" aria-label="<?php esc_attr_e( 'Sidebar', 'syublog-org-theme' ); ?>">
 	
 	<!-- Popular Posts Section -->
 	<section class="widget-popular-posts p-4 bg-white rounded-3 custom-shadow">
@@ -27,7 +27,28 @@
 				while ( $popular_posts->have_posts() ) :
 					$popular_posts->the_post();
 					?>
-					<li class="post-item border-bottom-0">
+					<li class="post-item border-bottom-0 d-flex align-items-center justify-content-center gap-3">
+						<div class="sidebar-post-item-img">
+							<?php if ( has_post_thumbnail() ) : ?>
+									<?php
+									the_post_thumbnail(
+										'thumbnail',
+										array(
+											'class' => 'img-fluid rounded-3',
+											'alt'   => get_the_title(),
+										)
+									);
+									?>
+							<?php else : ?>
+								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+									<img
+										src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/default-thumbnail.png' ); ?>"
+										class="img-fluid rounded-3"
+										alt="<?php esc_attr_e( 'Default Thumbnail', 'syublog-org-theme' ); ?>"
+									>
+								</a>
+							<?php endif; ?>
+						</div>
 						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 							<?php the_title(); ?>
 						</a>
