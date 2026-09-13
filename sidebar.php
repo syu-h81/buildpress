@@ -27,7 +27,7 @@
 				while ( $popular_posts->have_posts() ) :
 					$popular_posts->the_post();
 					?>
-					<li class="post-item border-bottom-0 d-flex align-items-center justify-content-center gap-3">
+					<li class="post-item border-bottom-0 d-flex align-items-center gap-3">
 						<div class="sidebar-post-item-img">
 							<?php if ( has_post_thumbnail() ) : ?>
 									<?php

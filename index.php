@@ -6,7 +6,7 @@
  */
 get_header();
 ?>
-<div class="site-content d-flex gap-4">
+<div class="site-content d-flex flex-column flex-md-row gap-4">
 	<section class="content-area flex-grow-1">
 		<?php if ( have_posts() ) : ?>
 			<div class="posts-list">

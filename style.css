@@ -288,6 +288,11 @@ img {
     display: block;
   }
 
+  .content-area {
+    width: 90%;
+    margin: 0 auto;
+  }
+
   .site-sidebar {
     margin-top: 3rem;
   }
