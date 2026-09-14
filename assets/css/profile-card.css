@@ -1,0 +1,109 @@
+.profile-card {
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #e8eef3;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.profile-card__cover {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background-color: #d9efff;
+}
+
+.profile-card__cover-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-card__body {
+  position: relative;
+  padding: 48px 24px 28px;
+}
+
+.profile-card__avatar {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 72px;
+  height: 72px;
+  overflow: hidden;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12);
+  transform: translate(-50%, -50%);
+}
+
+.profile-card__avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-card__name {
+  margin: 0;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.profile-card__description {
+  margin: 18px 0 0;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.profile-card__socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.profile-card__social {
+  display: flex;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 50%;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.profile-card__social:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+.profile-card__social--twitter {
+  background-color: #1da1f2;
+}
+
+.profile-card__social--facebook {
+  background-color: #1877f2;
+}
+
+.profile-card__social--instagram {
+  background-color: #ff6b7a;
+}
+
+.profile-card__social--rss {
+  background-color: #65d950;
+  font-size: 9px;
+}

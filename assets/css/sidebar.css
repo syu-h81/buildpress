@@ -1,5 +1,7 @@
 .sidebar {
   width: 30%;
+  display: grid;
+  gap: 1.5rem;
 }
 
 .sidebar-posts-list {
