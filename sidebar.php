@@ -7,6 +7,9 @@
 ?>
 <aside class="sidebar" aria-label="<?php esc_attr_e( 'Sidebar', 'syublog-org-theme' ); ?>">
 	
+	<!-- Profile Card -->
+	<?php get_template_part( 'template-parts/profile-card' ); ?>
+
 	<!-- Popular Posts Section -->
 	<section class="widget-popular-posts p-4 bg-white rounded-3 custom-shadow">
 		<h2 class="widget-title">
@@ -62,7 +65,7 @@
 	</section>
 
 	<!-- Categories Section -->
-	<section class="widget-categories mt-4 p-4 bg-white rounded-3 custom-shadow">
+	<section class="widget-categories p-4 bg-white rounded-3 custom-shadow">
 		<h2 class="widget-title">
 			<i class="ri-folder-line text-xl text-primary"></i>
 			<?php esc_html_e( 'Categories', 'syublog-org-theme' ); ?>
@@ -91,7 +94,7 @@
 	</section>
 
 	<!-- Tags Section -->
-	<section class="widget-tags mt-4 p-4 bg-white rounded-3 custom-shadow">
+	<section class="widget-tags p-4 bg-white rounded-3 custom-shadow">
 		<h2 class="widget-title">
 			<i class="ri-price-tag-3-line text-xl text-primary"></i>
 			<?php esc_html_e( 'Tags', 'syublog-org-theme' ); ?>

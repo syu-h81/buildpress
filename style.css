@@ -341,14 +341,14 @@ img {
 
 .article-card__title {
   color: #111827;
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 700;
   line-height: 1.45;
 }
 
 .article-card__description {
   color: #4b5563;
-  font-size: 11px;
+  font-size: 0.75rem;
   line-height: 1.65;
 }
 

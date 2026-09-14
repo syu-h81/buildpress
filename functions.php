@@ -65,6 +65,16 @@ function syublog_org_theme_assets() {
 }
 add_action( 'wp_enqueue_scripts', 'syublog_org_theme_assets' );
 
+function syublog_enqueue_profile_card_style() {
+  wp_enqueue_style(
+    'profile-card',
+    get_template_directory_uri() . '/assets/css/profile-card.css',
+    array(),
+    '1.0.0'
+  );
+}
+add_action( 'wp_enqueue_scripts', 'syublog_enqueue_profile_card_style' );
+
 function syublog_org_theme_bootstrap_attributes( $tag, $handle, $src ) {
 	if ( 'bootstrap' === $handle ) {
 		$tag = sprintf(
