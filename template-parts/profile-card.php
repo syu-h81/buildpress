@@ -13,9 +13,13 @@ $avatar_url = get_avatar_url( $user_id, array(
   'size' => 160,
 ) );
 
-$twitter_url = get_the_author_meta( 'twitter', $user_id );
-$facebook_url = get_the_author_meta( 'facebook', $user_id );
-$instagram_url = get_the_author_meta( 'instagram', $user_id );
+$profile_page = get_page_by_path( 'profile' );
+
+if ( $profile_page ) {
+  $profile_url = get_permalink( $profile_page->ID );
+} else {
+  $profile_url = home_url( '/profile/' );
+}
 ?>
 
 <div class="profile-card">
@@ -45,51 +49,9 @@ $instagram_url = get_the_author_meta( 'instagram', $user_id );
       </p>
     <?php endif; ?>
 
-    <div class="profile-card__socials">
-      <?php if ( $twitter_url ) : ?>
-        <a
-          href="<?php echo esc_url( $twitter_url ); ?>"
-          class="profile-card__social profile-card__social--twitter"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="X"
-        >
-          X
-        </a>
-      <?php endif; ?>
-
-      <?php if ( $facebook_url ) : ?>
-        <a
-          href="<?php echo esc_url( $facebook_url ); ?>"
-          class="profile-card__social profile-card__social--facebook"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Facebook"
-        >
-          f
-        </a>
-      <?php endif; ?>
-
-      <?php if ( $instagram_url ) : ?>
-        <a
-          href="<?php echo esc_url( $instagram_url ); ?>"
-          class="profile-card__social profile-card__social--instagram"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-        >
-          ◎
-        </a>
-      <?php endif; ?>
-
-      <a
-        href="<?php echo esc_url( get_feed_link() ); ?>"
-        class="profile-card__social profile-card__social--rss"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="RSS"
-      >
-        RSS
+    <div class="pt-3">
+      <a class="profile-card__link" href="<?php echo esc_url( $profile_url ); ?>">
+        プロフィール詳細へ
       </a>
     </div>
   </div>

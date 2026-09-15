@@ -86,24 +86,22 @@
     transform 0.2s ease;
 }
 
-.profile-card__social:hover {
-  opacity: 0.8;
-  transform: translateY(-2px);
+.profile-card__link {
+  text-decoration: none;
+  font-size: 0.875rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
-.profile-card__social--twitter {
-  background-color: #1da1f2;
-}
-
-.profile-card__social--facebook {
-  background-color: #1877f2;
-}
-
-.profile-card__social--instagram {
-  background-color: #ff6b7a;
-}
-
-.profile-card__social--rss {
-  background-color: #65d950;
-  font-size: 9px;
+.profile-card__link::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
 }
