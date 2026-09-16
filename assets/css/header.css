@@ -148,7 +148,7 @@
 }
 
 .category-nav__link:hover {
-  color: #244393;
+  color: #244393!important;
 }
 
 .category-nav__link::after {
