@@ -2,6 +2,7 @@
   width: 30%;
   display: grid;
   gap: 1.5rem;
+  align-self: flex-start;
 }
 
 .sidebar-posts-list {
