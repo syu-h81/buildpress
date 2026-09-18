@@ -105,7 +105,7 @@ function syublog_org_theme_content_heading_classes( $content ) {
 	}
 
 	$heading_classes = array(
-		'2' => 'border-start border-3 border-primary ps-2 mt-5 mb-3 fw-bold fs-3',
+		'2' => 'border-start border-3 border-primary ps-2 mt-5 mb-5 fw-bold fs-3',
 		'3' => 'bg-light border px-3 py-2 mt-4 mb-3 fw-semibold fs-4',
 	);
 

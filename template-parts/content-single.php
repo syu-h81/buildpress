@@ -5,7 +5,7 @@
  * @package Syublog_Org_Theme
  */
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('article'); ?>>
 	<header class="entry-header mb-4">
 		<?php if ( has_category() ) : ?>
 			<div class="d-flex flex-wrap gap-2 mb-3" aria-label="<?php esc_attr_e( 'Categories', 'syublog-org-theme' ); ?>">
