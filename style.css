@@ -329,10 +329,46 @@ img {
   gap: 1rem;
   padding: 1rem;
   padding-left: 2rem;
+  margin: 2rem 0;
 }
 
 .article ul li p {
   margin-bottom: 0;
+}
+
+.article table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #333;
+  font-size: 16px;
+}
+
+.article table th,
+.article table td {
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  line-height: 1.6;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.article table thead {
+  background-color: #fafbfc;
+}
+
+.article table th {
+  font-weight: 700;
+  text-align: center;
+}
+
+.article table th:first-child,
+.article table td:first-child {
+  width: 33%;
+}
+
+.article table th:last-child,
+.article table td:last-child {
+  width: 67%;
 }
 
 @media (max-width: 720px) {
