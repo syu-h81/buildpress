@@ -6,7 +6,7 @@
  */
 get_header();
 ?>
-<section class="content-area p-5 bg-white">
+<section class="content-area p-4 bg-white">
 	<?php while ( have_posts() ) : the_post(); ?>
 		<?php get_template_part( 'template-parts/content', 'single' ); ?>
 		<div class="post-navigation my-4">
