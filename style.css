@@ -371,6 +371,48 @@ img {
   width: 67%;
 }
 
+.directory-tree-wrapper {
+  position: relative;
+  margin: 32px 0;
+}
+
+.directory-tree {
+  margin: 0;
+  padding: 32px;
+  padding-top: 56px;
+  overflow-x: auto;
+  color: #f8fafc;
+  background-color: #111827;
+  border-radius: 8px;
+  font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  font-size: 16px;
+  line-height: 1.8;
+  white-space: pre;
+  tab-size: 2;
+}
+
+.directory-tree-copy {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 1;
+  padding: 6px 10px;
+  color: #cbd5e1;
+  background: transparent;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition:
+    color 0.2s,
+    background-color 0.2s;
+}
+
+.directory-tree-copy:hover {
+  color: #fff;
+  background-color: #1e293b;
+}
+
 @media (max-width: 720px) {
   .site-header {
     padding: 1rem;
@@ -404,5 +446,16 @@ img {
 
   .site-sidebar {
     margin-top: 3rem;
+  }
+
+  .directory-tree {
+    padding: 52px 20px 20px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .directory-tree-copy {
+    top: 12px;
+    right: 12px;
   }
 }

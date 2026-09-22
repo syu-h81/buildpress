@@ -65,6 +65,18 @@ function syublog_org_theme_assets() {
 }
 add_action( 'wp_enqueue_scripts', 'syublog_org_theme_assets' );
 
+function syublog_enqueue_scripts() {
+  wp_enqueue_script(
+    'syublog-copy-code',
+    get_template_directory_uri() . '/assets/js/copy-code.js',
+    array(),
+    '1.0.0',
+    true
+  );
+}
+
+add_action( 'wp_enqueue_scripts', 'syublog_enqueue_scripts' );
+
 function syublog_enqueue_profile_card_style() {
   wp_enqueue_style(
     'profile-card',
