@@ -361,16 +361,6 @@ img {
   text-align: center;
 }
 
-.article table th:first-child,
-.article table td:first-child {
-  width: 33%;
-}
-
-.article table th:last-child,
-.article table td:last-child {
-  width: 67%;
-}
-
 .directory-tree-wrapper {
   position: relative;
   margin: 32px 0;
