@@ -332,6 +332,10 @@ img {
   margin: 2rem 0;
 }
 
+.article nav ul {
+  border: none;
+}
+
 .article ul li p {
   margin-bottom: 0;
 }
